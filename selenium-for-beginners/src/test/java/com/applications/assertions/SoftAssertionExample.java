@@ -1,0 +1,43 @@
+package com.applications.assertions;
+
+import org.junit.Assert;
+import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
+
+public class SoftAssertionExample {
+	
+	SoftAssert softAssertion=new SoftAssert();
+	
+	@Test
+	public void myTest1()
+	{
+//		Assert.assertTrue(checkBigger(5,10));
+		softAssertion.assertFalse(checkBigger(5,10));
+		System.out.println("end of my test case");
+		softAssertion.assertAll();
+		
+	}
+	
+	@Test
+	public void myTest2()
+	{
+		Assert.assertTrue(checkBigger(10,5));
+//		System.out.println("end of my test case");
+	}
+	
+	public boolean checkBigger(int x,int y)
+	{
+		boolean results;
+		if(x>y)
+		{
+			results=true;
+			
+		}
+		else
+		{
+			results=false;
+		}
+		return results;
+	}
+
+}

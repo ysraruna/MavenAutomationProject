@@ -1,0 +1,17 @@
+package com.application.base;
+
+public class TestBase {
+	
+	@BeforeSuite
+	public void beforeSuite()
+	{
+		System.out.println("Starting selenium web drivers:Before Suite");
+	}
+	
+	@AfterSuite
+	public void afterSuite()
+	{
+		System.out.println("ending selenium webdriver:afterSuite");
+	}
+
+}

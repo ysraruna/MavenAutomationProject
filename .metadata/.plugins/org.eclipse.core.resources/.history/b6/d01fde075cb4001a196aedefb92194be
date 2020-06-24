@@ -1,0 +1,11 @@
+package com.applications.assertions;
+
+public class AssertTrueExample {
+	
+	@Test
+	public void assertTrueTest()
+	{
+		
+	}
+
+}

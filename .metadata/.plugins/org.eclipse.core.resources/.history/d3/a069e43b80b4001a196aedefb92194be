@@ -1,0 +1,23 @@
+package com.application.dataproviders;
+
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
+
+public class DataProviderTest {
+	
+	@Test
+	public void sumOfTwoNumbers(int x,int y)
+	{
+		int sum=x+y;
+		System.out.println("sum is:"+sum);
+	}
+	
+	@DataProvider(name="numberInputs")
+	public Object[][] getDataFromProvider()
+	{
+		Object[][] data=new Object[][];
+		return data;
+		
+	}
+
+}

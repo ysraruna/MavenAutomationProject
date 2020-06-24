@@ -1,0 +1,15 @@
+package com.applications.assertions;
+
+import org.junit.Assert;
+
+public class HardAssertionExamplle {
+	
+	@Test
+	public void myTest()
+	{
+		Assert.assertTrue(5,10));
+	}
+	
+	pu
+
+}

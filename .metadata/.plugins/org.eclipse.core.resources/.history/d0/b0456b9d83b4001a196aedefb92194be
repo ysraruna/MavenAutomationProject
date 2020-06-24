@@ -1,0 +1,15 @@
+package com.application.dataproviders;
+import org.testng.annotations.Test;
+
+public class DataProviderTest {
+	
+	@Test(dataProvider="numberInputs",dataProviderClass=SeperateDataProvider.class)
+	public void sumOfTwoNumbers(int x,int y)
+	{
+		int sum=x+y;
+		System.out.println("sum is:"+sum);
+	}
+	
+	
+
+}

@@ -1,0 +1,28 @@
+package com.applications.assertions;
+
+import org.junit.Assert;
+import org.testng.annotations.Test;
+
+public class HardAssertionExamplle {
+	
+	@Test
+	public void myTest()
+	{
+		Assert.assertTrue(5,10));
+	}
+	
+	public boolean checkBigger(int x,int y)
+	{
+		boolean results;
+		if(x>y)
+		{
+			results=true;
+			
+		}
+		else
+		{
+			results=false;
+		}
+	}
+
+}

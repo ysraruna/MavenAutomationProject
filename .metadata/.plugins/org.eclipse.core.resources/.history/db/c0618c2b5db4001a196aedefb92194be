@@ -1,0 +1,29 @@
+package com.applications.assertions;
+
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+public class AssertTrueExample {
+	
+	@Test
+	public void assertTrueTest()
+	{
+		Assert.assertTrue(checkBigger(10,5));
+	}
+	
+	public boolean checkBigger(int x,int y)
+	{
+		boolean results;
+		if(x>y)
+		{
+			results=true;
+		}
+		else
+		{
+			results=false;
+		}
+		
+		return results;	
+	}
+
+}

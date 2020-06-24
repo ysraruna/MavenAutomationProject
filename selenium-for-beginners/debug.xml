@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="LoginTestSuite" verbose="1" >
+  
+  <test name="PositiveTest">
+  <parameter name="url" value="http://the-internet.herokuapp.com/login"/>  
+  <parameter name="username" value="tomsmith"/>
+  <parameter name="password" value="SuperSecretPassword!"/>
+  <classes>
+  		<class name="com.application.test.LoginTest">
+  		<methods>
+  			<include name="positiveLoginTest"/>
+  		</methods>
+  	</class>
+  	</classes>
+   </test> 
+   

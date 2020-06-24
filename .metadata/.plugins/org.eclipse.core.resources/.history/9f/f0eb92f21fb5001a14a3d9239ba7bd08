@@ -1,0 +1,11 @@
+package com.application.parallelmethods;
+
+public class ParallelMethodExample {
+	
+	@Test
+	public void testCase1()
+	{
+		System.out.println("Running test case1");
+	}
+
+}

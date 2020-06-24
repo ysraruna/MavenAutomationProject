@@ -1,0 +1,20 @@
+package com.applications.listeners;
+
+import org.testng.IExecutionListener;
+
+public class ExecutionListeners implements IExecutionListener{
+	
+	private startTime;
+
+	public void onExecutionStart() {
+		
+		System.out.println("TestNG is going start test suites execution");
+		startTime=System.
+	}
+
+	public void onExecutionFinish() {
+		System.out.println("TestNG has finished execution of test suites");
+		
+	}
+
+}

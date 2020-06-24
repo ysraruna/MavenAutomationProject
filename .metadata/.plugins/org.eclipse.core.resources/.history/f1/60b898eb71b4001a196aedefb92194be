@@ -1,0 +1,11 @@
+package com.application.test;
+
+public class DepenedsonSingle {
+	
+	@Test
+	public void test1()
+	{
+		System.out.println("test1");
+	}
+
+}

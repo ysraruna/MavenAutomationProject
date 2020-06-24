@@ -1,0 +1,15 @@
+package com.application.annotations;
+
+import org.testng.annotations.Test;
+
+import com.application.base.TestBase;
+
+public class Annotations2 extends TestBase{
+	
+	@Test
+	public void testMethod3()
+	{
+		System.out.println("test method3 is:");
+	}
+
+}

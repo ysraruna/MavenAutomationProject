@@ -1,0 +1,33 @@
+package com.application.annotations;
+
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+public class Annotations {
+	
+	@BeforeClass
+	public void beforeClassMethod()
+	{
+		
+	}
+	
+	@BeforeMethod
+	public void setUp()
+	{
+		
+	}
+	
+	@Test
+	public void testMethod1()
+	{
+		System.out.println("test method1");
+	}
+	
+	@Test
+	public void testMethod2()
+	{
+		System.out.println("test method2");
+	}
+
+}

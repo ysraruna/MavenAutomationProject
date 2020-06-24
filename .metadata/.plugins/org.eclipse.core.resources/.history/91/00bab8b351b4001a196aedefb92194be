@@ -1,0 +1,7 @@
+package com.application.annotations;
+
+import com.application.base.TestBase;
+
+public class Annotations2 extends TestBase{
+
+}

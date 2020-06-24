@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="ParallelClassesSuite" parallel="classes" thread-count='2' >
+
+  
+  <test name="ParallelClasses">
+    <classes>
+  		<class name="com.application.parallelmethods.ParallelMethodExample"/>
+  		<class name="com.application.parallelmethods.ParallelMethodExample"/>
+  	</classes>
+   </test> 
+   
+   
+   
+   </suite> 

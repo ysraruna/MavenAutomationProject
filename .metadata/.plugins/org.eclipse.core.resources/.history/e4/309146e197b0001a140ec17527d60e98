@@ -1,0 +1,113 @@
+package com.application.test;
+import java.util.concurrent.TimeUnit;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
+import org.testng.annotations.Test;
+
+public class LoginTest {
+	WebDriver driver;
+	
+	@Parameters({"browser"})
+	@BeforeMethod(alwaysRun=true)
+	private void setUp(String browser)
+	{
+		
+		 Switch (browser)
+		 {
+			 case "chrome" :
+			 	System.setProperty("webdriver.chrome.driver", "C:\\Users\\shaurish\\Desktop\\Selenium_Training\\chromedriver_win32\\chromedriver.exe");
+			 	driver=new ChromeDriver();	
+			 	break;
+			 	
+			 case "firefox" :
+			 	
+			 System.setProperty("webdriver.gecko.driver", "C:\\Users\\shaurish\\Desktop\\Selenium_Training\\chromedriver_win32\\gekodriver.exe");
+			 	driver=new FirefoxDriver();	
+			 	break;
+			 	
+			 	default :
+		 }
+	}
+	
+	@Parameters({"url","username","password"})
+	@Test(priority=1,groups={"positveTests"})
+	public void positiveLoginTest(String url,String username,String password)
+	{
+		driver.get(url);
+		 driver.manage().window().maximize();
+		 driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+		 WebElement userName=driver.findElement(By.id("username"));
+		 userName.sendKeys(username);
+		 WebElement passWord=driver.findElement(By.id("password"));
+		 passWord.sendKeys(password);
+		 WebElement loginButton=driver.findElement(By.tagName("button"));
+		 loginButton.click();
+		 String expectedUrl="http://the-internet.herokuapp.com/secure";
+		 String actualUrl=driver.getCurrentUrl();
+		 Assert.assertEquals(actualUrl, expectedUrl,"Acutal url is not same as expected");
+		 WebElement logOutButton=driver.findElement(By.xpath("//a[@class='button secondary radius']"));
+		 WebElement successMessage=driver.findElement(By.cssSelector("#flash"));
+		 Assert.assertTrue(logOutButton.isDisplayed(), "logout button is not displayed");
+		 String expectedMessage="You logged into a secure area!";
+		 String actualMessage=successMessage.getText();
+		 Assert.assertTrue(actualMessage.contains(expectedMessage),
+		 	"Actual message doesnot contain expected message\n Actual message is:"+actualMessage +"\nexpectedMessage is:" +expectedMessage);
+		 
+	}
+
+	@Parameters({"url","username","password"})
+	@Test(priority=2,groups={"negativeTests"})
+	public void invalidUserNameTest(String url,String username,String password){
+		
+		System.out.println("Invalid user name test");
+		driver.get(url);
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+		WebElement userName=driver.findElement(By.id("username"));
+		userName.sendKeys(username);
+		WebElement passWord=driver.findElement(By.id("password"));
+		passWord.sendKeys(password);
+		WebElement loginButton=driver.findElement(By.tagName("button"));
+		loginButton.click();
+		WebElement errorMessagePath=driver.findElement(By.xpath("//*[@id='flash']"));
+		String expectedErrorMessage="Your username is invalid!";
+		String actualErrorMessage=errorMessagePath.getText();
+		Assert.assertTrue(actualErrorMessage.contains(expectedErrorMessage),"messages are not equal");
+		
+	}
+	
+	@Parameters({"url","username","password"})
+	@Test(priority=3,groups={"negativeTests","smokeTests"})
+	public void invalidPassWordTest(String url,String username,String password){
+		
+		System.out.println("Invalid password test");
+		driver.get(url);
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+		WebElement userName=driver.findElement(By.id("username"));
+		userName.sendKeys(username);
+		WebElement passWord=driver.findElement(By.id("password"));
+		passWord.sendKeys(password);
+		WebElement loginButton=driver.findElement(By.tagName("button"));
+		loginButton.click();
+		WebElement errorMessagePath=driver.findElement(By.xpath("//*[@id='flash']"));
+		String expectedErrorMessage="Your password is invalid!";
+		String actualErrorMessage=errorMessagePath.getText();
+		Assert.assertTrue(actualErrorMessage.contains(expectedErrorMessage),"messages are not equal");
+		
+	}
+	
+	@AfterMethod
+	 void tearDown()
+	{
+		driver.quit();
+	}
+
+
+}

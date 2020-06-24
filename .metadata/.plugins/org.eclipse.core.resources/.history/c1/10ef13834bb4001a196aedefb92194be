@@ -1,0 +1,17 @@
+package com.application.annotations;
+
+public class Annotations {
+	
+	@BeforeMethod
+	public void setUp()
+	{
+		
+	}
+	
+	@Test
+	public void testMethod()
+	{
+		
+	}
+
+}

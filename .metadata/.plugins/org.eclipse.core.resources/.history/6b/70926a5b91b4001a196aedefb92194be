@@ -1,0 +1,30 @@
+package com.applications.listenerTests;
+
+import org.testng.annotations.Test;
+
+public class ListenerTest {
+	
+	@BeforeMethod
+	public void setUp()
+	{
+		
+	}
+	
+	@Test		
+	public void Login()				
+	{		
+	    driver.get("http://demo.guru99.com/V4/");					
+	    driver.findElement(By.name("uid")).sendKeys("mngr34926");							
+	    driver.findElement(By.name("password")).sendKeys("amUpenu");							
+	    driver.findElement(By.name("btnLogin")).click();					
+	}		
+
+	// Forcefully failed this test as to verify listener.		
+	@Test		
+	public void TestToFail()				
+	{		
+	    System.out.println("This method to test fail");					
+	    Assert.assertTrue(false);			
+	}		
+
+}

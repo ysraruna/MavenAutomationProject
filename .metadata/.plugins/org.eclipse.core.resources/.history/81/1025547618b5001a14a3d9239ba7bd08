@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="IExecutionListenersTestSuite" verbose="1" >
+<listeners>
+	<listener class-name="com.applications.listeners.ExecutionListeners"/>
+</listeners>
+  
+  <test name="IExecutionListenersTest">
+    <classes>
+  		<class name="com.applications.listeners.ExecutionListenersTest"/>
+  	</classes>
+   </test> 
+   
+   
+   
+   </suite> 

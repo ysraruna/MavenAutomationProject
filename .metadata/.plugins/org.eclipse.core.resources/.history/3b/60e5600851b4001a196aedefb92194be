@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="AnnotationsSuite" verbose="1" >
+  
+  <test name="Screen1">
+    <classes>
+  		<class name="com.application.test.TimeOutTest"/>
+  		<class name="com.application.test.TimeOutTest"/>
+  	</classes>
+   </test> 
+   
+   
+   <test name="Screen2">
+    <classes>
+  		<class name="com.application.test.TimeOutTest"/>
+  	</classes>
+   </test> 
+   </suite> 

@@ -1,0 +1,13 @@
+package com.application.paralleltestmethods;
+
+import org.testng.annotations.Test;
+
+public class ParallelTestMethodExample {
+	
+	@Test
+	public void testCase1()
+	{
+		System.out.println("Test case1 with threa id is:"+Thread.currentThread().getId());
+	}
+
+}

@@ -1,0 +1,11 @@
+package com.application.base;
+
+public class TestBase {
+	
+	@BeforeSuite
+	public void beforeSuite()
+	{
+		System.out.println("Starting selenium web drivers:Before Suite");
+	}
+
+}

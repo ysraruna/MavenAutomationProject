@@ -1,0 +1,22 @@
+package com.applications.assertions;
+
+import org.testng.annotations.Test;
+
+public class TimeOutInMethods {
+	
+	@Test
+	public void test1() throws InterruptedException
+	{
+		System.out.println("Test1:");
+		
+			System.out.println("welcocme to fast and easy lerning");
+		Thread.sleep(1000);
+	}
+	
+	@Test
+	public void test2()
+	{
+		System.out.println("Test2:");
+	}
+
+}

@@ -1,0 +1,11 @@
+package com.application.dataproviders;
+
+public class DataProviderTest {
+	
+	@Test
+	public void sumOfTwoNumbers(int x,int y)
+	{
+		
+	}
+
+}

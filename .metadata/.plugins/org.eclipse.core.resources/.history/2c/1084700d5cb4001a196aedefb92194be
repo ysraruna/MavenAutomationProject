@@ -1,0 +1,13 @@
+package com.applications.assertions;
+
+import org.testng.annotations.Test;
+
+public class AssertTrueExample {
+	
+	@Test
+	public void assertTrueTest()
+	{
+		
+	}
+
+}

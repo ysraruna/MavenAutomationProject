@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="AllTestSuite" verbose="2" >
+  <test name="positveTests">
+        <classes>
+        	<class name=""/>
+      
+      </classes>
+  </test> 
+  
+  <test name="NegativeTests">
+  	<classes>
+  		<class name="com.application.test.NegativeTest"/>
+  	</classes>
+   
+  
+     
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

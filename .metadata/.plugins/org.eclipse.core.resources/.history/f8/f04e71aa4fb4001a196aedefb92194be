@@ -1,0 +1,35 @@
+package com.application.base;
+
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.BeforeTest;
+
+public class TestBase {
+	
+	@BeforeSuite
+	public void beforeSuite()
+	{
+		System.out.println("Starting selenium web drivers:Before Suite");
+	}
+	
+	@AfterSuite
+	public void afterSuite()
+	{
+		System.out.println("ending selenium webdriver:afterSuite");
+	}
+	
+	@BeforeTest
+	public void beforeTest()
+	{
+		System.out.println("Before Test");
+	}
+	
+	@AfterTest
+	public void afterTest()
+	{
+		System.out.println("ending selenium webdriver:afterSuite");
+	}
+
+
+}

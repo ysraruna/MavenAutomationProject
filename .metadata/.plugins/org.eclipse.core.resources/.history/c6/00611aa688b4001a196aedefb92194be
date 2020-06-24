@@ -1,0 +1,13 @@
+package com.applications.iTestResults;
+
+
+public class ITestResultExample {
+	
+	@Test
+	public void myTestA()
+	{
+		System.out.println("This is myTestA method");
+		Ass
+	}
+
+}
