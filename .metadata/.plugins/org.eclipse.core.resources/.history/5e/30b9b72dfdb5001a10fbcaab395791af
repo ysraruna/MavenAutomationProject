@@ -8,11 +8,13 @@ import org.testng.annotations.Test;
 
 import com.application.base.TestBase;
 
-/** created ArunaTest local branch
+/** cre
  * 
  * */
 
-
+ * @author shaurish
+ *
+ */
 public class Annotations extends TestBase{
 	
 	@BeforeClass
